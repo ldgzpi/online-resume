@@ -4,68 +4,42 @@ function help(){
   return "<h2><span style=\"color:#eb926d;\">Help:</span></h2><table>\
   <tr>\
     <td>all</td>\
-    <td>Give me the complete picture</td>\
+    <td>Ver todo.</td>\
   </tr>\
   <tr>\
     <td>about</td>\
-    <td>Everything you ever wanted to know about John Smith</td>\
+    <td>Un poco más sobre mí.</td>\
   </tr>\
   <tr>\
     <td>contact</td>\
-    <td>How to get in touch with John Smith</td>\
+    <td>¡Estemos en contacto!</td>\
   </tr>\
   <tr>\
     <td>links</td>\
-    <td>See what links John Smith wants you to click on</td>\
+    <td>Algunos links útiles.</td>\
   </tr>\
   <tr>\
     <td>skills</td>\
-    <td>Get to know how good John Smith is at stuff</td>\
+    <td>Habilidades.</td>\
   </tr>\
   <tr>\
     <td>cv</td>\
-    <td>Download John Smith's CV</td>\
+    <td>Descargar CV</td>\
   </tr>\
-  <tr>\
-    <td>rickroll</td>\
-    <td>Never Gonna Give You Up</td>\
-  </tr></table>";
+  </table>";
 }
 
 function contact(){
-  return "<h2><span style=\"color:#cc6666;\">Contact:</span></h2><table>\
+  return "<h2><span style=\"color:#cc6666;\">Contacto:</span></h2><table>\
   <tr>\
     <td>Email</td>\
-    <td><a href=\"mailto:john.smith@emailprovider.com\">john.smith@emailprovider.com</a></td>\
+    <td><a href=\"mailto:pilarledesmagonzalez@gmail.com\">pilarledesmagonzalez@gmail.com</a></td>\
   </tr>\
-  <tr>\
-    <td>Telephone</td>\
-    <td><a href=\"tel:+45-657-56234\">+45-657-56234</a></td>\
-  </tr>\
-  <tr>\
-    <td>Address</td>\
-    <td>John Smith</td>\
-  </tr>\
-  <tr>\
-    <td> </td>\
-    <td>205 Autumn Street</td>\
-  </tr>\
-  <tr>\
-    <td> </td>\
-    <td>5472</td>\
-  </tr>\
-  <tr>\
-    <td> </td>\
-    <td>London</td>\
-  </tr>\
-  <tr>\
-    <td> </td>\
-    <td>UK</td>\
-  </tr></table>";
+</table>";
 }
 
 function skills(){
-  return "<h2><span style=\"color:#81a2be;\">Skills:</span></h2><table>\
+  return "<h2><span style=\"color:#81a2be;\">Experiencia:</span></h2><table>\
   <tr>\
     <td>Photoshop</td>\
     <td>▰▰▰▰▰▰▱▱▱▱ 60%</td>\
@@ -104,84 +78,6 @@ function links(){
   <li><a href=\"https://www.facebook.com\" target=\"_blank\"><i class=\"fab fa-facebook\"></i> Facebook</a></li>\
   </ul>";
 }
-
-function rickroll(){
-  return "<p>We're no strangers to love<br>\
-    You know the rules and so do I<br>\
-    A full commitment's what I'm thinking of<br>\
-    You wouldn't get this from any other guy<br>\
-    <br>\
-    I just wanna tell you how I'm feeling<br>\
-    Gotta make you understand<br>\
-    <br>\
-    Never gonna give you up<br>\
-    Never gonna let you down<br>\
-    Never gonna run around and desert you<br>\
-    Never gonna make you cry<br>\
-    Never gonna say goodbye<br>\
-    Never gonna tell a lie and hurt you<br>\
-    <br>\
-    We've known each other for so long<br>\
-    Your heart's been aching, but<br>\
-    You're too shy to say it<br>\
-    Inside, we both know what's been going on<br>\
-    We know the game and we're gonna play it<br>\
-    <br>\
-    And if you ask me how I'm feeling<br>\
-    Don't tell me you're too blind to see<br>\
-    <br>\
-    Never gonna give you up<br>\
-    Never gonna let you down<br>\
-    Never gonna run around and desert you<br>\
-    Never gonna make you cry<br>\
-    Never gonna say goodbye<br>\
-    Never gonna tell a lie and hurt you<br>\
-    <br>\
-    Never gonna give you up<br>\
-    Never gonna let you down<br>\
-    Never gonna run around and desert you<br>\
-    Never gonna make you cry<br>\
-    Never gonna say goodbye<br>\
-    Never gonna tell a lie and hurt you<br>\
-    <br>\
-    (Ooh, give you up)<br>\
-    (Ooh, give you up)<br>\
-    Never gonna give, never gonna give<br>\
-    (Give you up)<br>\
-    Never gonna give, never gonna give<br>\
-    (Give you up)<br>\
-    <br>\
-    We've known each other for so long<br>\
-    Your heart's been aching, but<br>\
-    You're too shy to say it<br>\
-    Inside, we both know what's been going on<br>\
-    We know the game and we're gonna play it<br>\
-    <br>\
-    I just wanna tell you how I'm feeling<br>\
-    Gotta make you understand<br>\
-    <br>\
-    Never gonna give you up<br>\
-    Never gonna let you down<br>\
-    Never gonna run around and desert you<br>\
-    Never gonna make you cry<br>\
-    Never gonna say goodbye<br>\
-    Never gonna tell a lie and hurt you<br>\
-    <br>\
-    Never gonna give you up<br>\
-    Never gonna let you down<br>\
-    Never gonna run around and desert you<br>\
-    Never gonna make you cry<br>\
-    Never gonna say goodbye<br>\
-    Never gonna tell a lie and hurt you<br>\
-    <br>\
-    Never gonna give you up<br>\
-    Never gonna let you down<br>\
-    Never gonna run around and desert you<br>\
-    Never gonna make you cry<br>\
-    Never gonna say goodbye<br>\
-    Never gonna tell a lie and hurt you</p>";
-}
-
 // Main Function
 function commandProcessor(e){
 
@@ -197,22 +93,18 @@ function commandProcessor(e){
     //Select what info to print according to command
     if(txtInput == "help"){
       document.getElementById('injected').innerHTML=help();
-    }else if (txtInput=="all") {
+    }else if (txtInput=="ver-todo") {
       document.getElementById('injected').innerHTML=about() + "\n\n\n" + skills() + "\n\n\n" + links() + "\n\n\n" + contact() + "\n\n\n" + cv();
-    }else if (txtInput == "about") {
+    }else if (txtInput == "sobre-mi") {
       document.getElementById('injected').innerHTML=about();
-    }else if (txtInput == "contact") {
+    }else if (txtInput == "contacto") {
       document.getElementById('injected').innerHTML=contact();
     }else if (txtInput == "cv") {
       document.getElementById('injected').innerHTML=cv();
-    }else if (txtInput=="skills") {
+    }else if (txtInput=="experiencia") {
       document.getElementById('injected').innerHTML=skills();
     }else if (txtInput=="links") {
       document.getElementById('injected').innerHTML=links();
-    }else if (txtInput == "rickroll") {
-      var win = window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", '_blank');
-      win.focus();
-      document.getElementById('injected').innerHTML=rickroll();
     }else if (txtInput == "credits") {
       document.getElementById('injected').innerHTML=credits();
     }else{
